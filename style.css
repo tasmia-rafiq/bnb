@@ -266,9 +266,8 @@ ul,li{
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 30px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 .achievements .row .col{
     width: 20%;
@@ -354,6 +353,7 @@ ul,li{
 
 .news .row .col{
     width: 33.333%;
+    padding: 0px 30px 40px 0;
 }
 .news .news-content{
     display: flex;
@@ -386,19 +386,31 @@ ul,li{
     opacity: 1;
 }
 
+.news .inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.news-content .content-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .news-content .inner .thumbnail{
-    overflow: hidden;
+    /* overflow: hidden; */
     border-radius: 10px;
     height: 234px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .news-content .inner .thumbnail a{
     display: flex;
     overflow: hidden;
     border-radius: 10px;
+    width: 100%;
 }
 
 .news-content .inner .thumbnail a img{
@@ -445,7 +457,7 @@ ul,li{
     margin-bottom: 25px;
     display: inline-block;
 }
-.news-content .inner .content .date-published{
+.news-content .inner .date-published{
     color: #f1f1f1;
     font-size: 13px;
     font-weight: 300;
@@ -978,7 +990,7 @@ footer .headline .divider{
 .about1 p{
     color: var(--color-lighten);
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1.7;
     margin-bottom: 30px;
 }
 
@@ -1083,7 +1095,9 @@ footer .headline .divider{
     width: 50%;
     color: var(--color-lighten);
     font-size: 18px;
-    line-height: 1.3;
+    font-weight: 500;
+    line-height: 1.7;
+    line-height: 35px;
 }
 .about2-img,
 .about3-img,
@@ -1100,7 +1114,7 @@ footer .headline .divider{
 .about3,
 .about4{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     gap: 30px;
 }
@@ -1108,9 +1122,9 @@ footer .headline .divider{
     font-size: 18px;
     margin-bottom: 20px; 
 }
-.about4-content q{
+.about4-content p{
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.8;
     margin-bottom: 30px;
 }
 
@@ -1207,6 +1221,322 @@ footer .headline .divider{
     font-weight: 500;
     transition: 0.4s;
 }
+
+
+/* ===== Mix Tapes Page ===== */
+.mixtapes-page{
+    margin-top: 111.4px;
+}
+
+.mixtapes-page-header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+}
+
+.mixtapes-page .head h1{
+    font-size: 42px;
+    margin: 0;
+    color: #f1f1f1;
+    font-weight: 600;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.mixtapes-page-header .search-course {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-course input{
+    background-color: #191b1e;
+    border-radius: 6px;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+    height: 55px;
+    transition: 0.4s;
+    border: 2px solid #191b1e;
+    padding: 0 15px;
+    font-size: 14px;
+    font-family: var(--poppins);
+    color: var(--color-lighten);
+    box-shadow: var(--inner-shadow);
+    letter-spacing: 1px;
+    width: 100%;
+}
+.search-course input:focus{
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: none;
+}
+
+.search-course .searchBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 47px;
+    width: 60px;
+    border: 2px solid var(--color-primary);
+    border-radius: 6px;
+    border-top-left-radius: unset;
+    border-bottom-left-radius: unset;
+    padding: 0;
+    box-sizing: content-box;
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+.searchBtn i{
+    color: #f1f1f1;
+    font-size: 16px;
+}
+
+.sort-grid{
+    display: flex;
+    max-width: 380px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* gap: 1px; */
+}
+.sort-grid .sort-label{
+    white-space: nowrap;
+    /* flex-grow: 1; */
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-basis: 30%; */
+
+    background-color: #191b1e;
+    border-radius: 6px;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+    height: 55px;
+    transition: 0.4s;
+    border: 2px solid #191b1e;
+    padding: 0 15px;
+    color: var(--color-lighten);
+    box-shadow: var(--inner-shadow);
+}
+.sort-grid #sort-select{
+    display: flex;
+    align-items: center;
+    border: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    outline: none;
+    background-color: #191b1e;
+    border-radius: 6px;
+    border-top-left-radius: unset;
+    border-bottom-left-radius: unset;
+    height: 55px;
+    transition: 0.4s;
+    border: 2px solid #191b1e;
+    padding: 0 15px;
+    font-size: 14px;
+    font-family: var(--poppins);
+    color: var(--color-lighten);
+    box-shadow: var(--inner-shadow);
+    letter-spacing: 1px;
+    width: 100%;
+}
+#sort-select option{
+    font-size: 14px;
+}
+
+.course-filter{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.course-filter .filter-icon{
+    font-size: 17px;
+    transition: 0.4s;
+    color: var(--color-lighten);
+    position: relative;
+    display: inline-block;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 6px;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    cursor: pointer;
+}
+.filter-icon i{
+    color: #f1f1f1;
+    font-size: 22px;
+}
+
+
+.tape-section .tape .row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tape-section .tape .row .col {
+    width: 50%;
+    padding: 0 30px 30px 30px;
+}
+
+.tape-section .tape .tape-content {
+    display: flex;
+    align-items: stretch;
+    -webkit-box-align: stretch;
+    text-align: left;
+    padding: 20px 20px 40px 20px;
+    border-radius: 20px;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    transition: 0.5s all ease-in-out;
+}
+
+.tape-section .tape .tape-content::before {
+    content: "";
+    position: absolute;
+    transition: 0.4s;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right bottom, #212428, #16181c);
+    opacity: 0;
+    z-index: -1;
+}
+
+.tape-section .tape .tape-content:hover::before {
+    opacity: 1;
+}
+
+.tape-section .tape .tape-content .inner .thumbnail {
+    overflow: hidden;
+    border-radius: 10px;
+    height: 234px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tape-section .tape .tape-content .inner .thumbnail a {
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.tape-section .tape .tape-content .inner .thumbnail a img {
+    width: 100%;
+    transition: 0.4s;
+    height: auto;
+    object-fit: cover;
+}
+
+.tape-section .tape .tape-content:hover .inner .thumbnail img {
+    transform: scale(1.1);
+}
+
+.tape-section .tape .tape-content .inner .content {
+    padding: 0 10px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.tape-section .tape .tape-content .inner .content .category{
+    color: var(--color-lighten);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.tape-section .tape .tape-content .inner .content .title {
+    margin: 0 0 10px 0;
+    transition: 0.4s;
+}
+
+.tape-section .tape .tape-content .inner .content .title a {
+    transition: 0.4s;
+    color: #f1f1f1;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 34px;
+    display: block;
+}
+
+.tape-section .tape .tape-content .inner .content .course-type {
+    text-align: right;
+    color: #f1f1f1;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 20px 0 0 0;
+    border-top: 1px solid var(--color-lighten);
+}
+
+
+/* ===== News Pages ===== */
+.news-header{
+    width: 100%;
+    margin-top: 111px;
+    padding: 80px 0;
+    background: url('images/news/news-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.news-header h1{
+    font-size: 48px;
+    color: #f1f1f1;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.news-section h2{
+    text-align: left;
+    display:inline-block;
+    font-size: 36px;
+    color: #f1f1f1;
+    font-weight: 500;
+    padding-bottom: 10px;
+    margin: 30px 10px;
+    position: relative;
+    transition: 0.4s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
