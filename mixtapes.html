@@ -29,7 +29,7 @@
             </a>
 
             <div class="nav-menu">
-                <ul>
+                <ul class="nav-list">
                     <li><a href="/">Home</a></li>
                     <li><a href="mixtapes.html" class="active">Mixtapes</a></li>
                     <li><a href="news.html">News</a></li>
@@ -39,16 +39,68 @@
 
                 <div class="right-menu">
                     <a href="#" class="favorites">
-                        <i class="lni lni-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
                     </a>
 
                     <div class="search-toggler">
-                        <i class="lni lni-search-alt"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
+
+                <i class="fa-solid fa-bars" id="bar"></i>
+
+                <!-- <div class="search-toggle-open">
+                            <input type="search" name="search" placeholder="Search">
+                            <button type="submit" class="searchBtn">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div> -->
             </div>
         </nav>
     </header>
+
+    <div class="popup-mobilemenu">
+        <div class="menu-inner">
+            <div class="menu-top">
+                <div class="menu-header">
+                    <a href="/" class="logo">
+                        <img src="images/logo-white.png" alt="logo">
+                    </a>
+
+                    <div class="close-button">
+                        <button class="close" id="close">
+                            <i class="fa-solid fa-close"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <nav id="sideNavMobile" class="mainmenu-nav">
+                    <ul class="navbar-list1">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="mixtapes.html" class="active">Mixtapes</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="right-menu right-menu-mob">
+                <a href="#" class="favorites">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+                <div class="search-toggler">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="signin">
+                <button class="signin-btn" type="submit">Sign In</button>
+            </div>
+        </div>
+    </div>
 
     <!-- ===== Mix tapes Header ===== -->
     <section class="mixtapes-page">
@@ -77,17 +129,19 @@
                             <option value="popular">Popular (most viewed)</option>
                         </select>
                     </div>
+
+                    <div class="course-filter">
+                        <div class="filter-icon">
+                            <i class="fi-rr-grid"></i>
+                        </div>
+
+                        <div class="filter-icon">
+                            <i class="fi-rr-list"></i>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="course-filter">
-                    <div class="filter-icon">
-                        <i class="fi-rr-grid"></i>
-                    </div>
 
-                    <div class="filter-icon">
-                        <i class="fi-rr-list"></i>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -130,7 +184,7 @@
     </div>
 
     <!-- ===== Footer ===== -->
-    <footer>
+    <!-- <footer>
         <div class="container">
             <div class="footer-row">
                 <div class="footer-cols">
@@ -220,7 +274,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <script src="script.js"></script>
 
