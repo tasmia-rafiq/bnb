@@ -7,7 +7,8 @@
     --background-color-1: linear-gradient(145deg, #1e2024, #23272b);
     --color-lighten: #c4cfde;
     --color-primary: #ff014f;
-    --shadow-1: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    --shadow-1: 10px 10px 19px #1c1e22, -10px -10px 19px #24282b;
+    --shadow-2: 10px 10px 19px #1c1e22, -10px -10px 19px #181b1d;
     --inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
 }
 
@@ -218,6 +219,7 @@ header {
     width: 100%;
     box-shadow: 0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0.3);
     transition: all .15s ease-in-out 0s;
+    padding: 7px 30px;
 
     background-color: #212428de;
     backdrop-filter: blur(15px);
@@ -442,6 +444,29 @@ header {
     margin-left: -25px;
 }
 
+.popup-mobilemenu .signin{
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.popup-mobilemenu .signin-btn{
+    border-radius: 6px;
+    background: linear-gradient(145deg, #1e2024, #23272b);
+    box-shadow: var(--shadow-2);
+    transition: 0.4s;
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    font-weight: 500;
+    border: 0 none;
+    color: var(--color-primary);
+    cursor: pointer;
+    width: 60%;
+    height: 55px;
+    padding: 0 15px;
+    letter-spacing: 1px;
+    font-family: var(--poppins);
+    margin-top: 30px;
+}
+
 /* ===== Top Banner ====== */
 .top-banner-img{
     width: 100%;
@@ -505,7 +530,6 @@ header {
     align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
 }
 .news .row{
     display: flex;
@@ -515,8 +539,9 @@ header {
     flex-wrap: wrap;
 }
 .achievements .row .col{
-    width: 20%;
-    padding-right: 10px;
+    width: 25%;
+    padding-right: 30px;
+    padding-bottom: 30px;
 }
 
 .achievements .achievement-content{
@@ -749,7 +774,7 @@ header {
 }
 
 .article-area .article-img {
-    width: 240%;
+    width: 100%;
     position: relative;
     z-index: 1;
 }
@@ -762,6 +787,10 @@ header {
 }
 .article-area .article-img:hover img {
     transform: scale(1.03);
+}
+
+.article-area .article-content{
+    width: 100%;
 }
 
 .article-area .article-content h2{
@@ -1784,7 +1813,41 @@ footer .headline .divider{
         font-size: 28px;
         font-weight: 700;
     }
+
+    .navbar .logo img {
+        width: 90%;
+    }
+
+    .top-banner .contact-area{
+        display: none;
+    } 
+
+    .top-banner .what-we-do {
+        padding: 20px 0;
+    }
     
+    .news .row .col,
+    .achievements .row .col{
+        width: 50%;
+    }
+
+    .about4{
+        flex-direction: column;
+    }
+    .about4-content,
+    .about4-img{
+        width: 100%;
+    }
+    .article-area .article-content h2{
+        font-size: 28px;
+    }
+    
+}
+
+@media (max-width: 425px){
+    .navbar .logo {
+        width: 30%;
+    }
 }
 
 
