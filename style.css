@@ -814,17 +814,27 @@ header {
 }
 
 /* ===== Footer ===== */
+footer{
+    width: 100%;
+}
 .footer-row{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* gap: 18px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; */
 }
+.footer-row.bottom-footer{
+    justify-content: space-between;
+    gap: 15px;
+}
+
 .footer-cols{
     width: 25%;
+    padding-right: 20px;
 }
 
 .footer-cols h3{
@@ -1029,14 +1039,19 @@ footer .social-links{
 .copyright-links{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* gap: 30px; */
     /* margin: 20px 0; */
+}
+.copyright-links li{
+    padding-bottom: 10px;
 }
 .copyright-links li a{
     color: #f1f1f1;
     font-size: 14px;
     padding-bottom: 10px;
+    padding-right: 20px;
     transition: 0.4s;
     text-transform: uppercase;
     position: relative;
@@ -1518,6 +1533,17 @@ footer .headline .divider{
     .mixtapes-page-header{
         flex-wrap: wrap;
     }
+
+    .footer-cols{
+        width: 33.333%;
+        padding-bottom: 30px;
+    }
+    .footer-cols:first-child{
+        padding-bottom: 50px;
+    }
+    .footer-cols:last-child{
+        width: 100%;
+    }
 }
 
 .mixtapes-page .head h1{
@@ -1834,7 +1860,7 @@ footer .headline .divider{
     }
 
     .navbar .logo img {
-        width: 90%;
+        width: 100%;
     }
 
     .top-banner .contact-area{
@@ -1907,6 +1933,12 @@ footer .headline .divider{
     }
     .contact-section h1{
         margin-top: 10px;
+    }
+
+    /* ----- footer ----- */
+    .footer-cols,
+    .footer-cols:last-child{
+        width: 50%
     }
 }
 
@@ -1991,6 +2023,15 @@ footer .headline .divider{
         align-items: center;
         font-size: 18px;
     }
+
+    /* ----- footer ----- */
+    .footer-cols,
+    .footer-cols:last-child{
+        width: 100%;
+    }
+    .footer-cols p{
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 425px){
@@ -2037,6 +2078,14 @@ footer .headline .divider{
     .news-content .inner .content .desc,
     .news-content .inner .date-published{
         font-size: 12px;
+    }
+
+    /* ---- footer ----- */
+    .social-links li{
+        margin: 0 10px 10px 0;
+    }
+    .contact-info ul li p, .contact-info ul li a, .footer-cols .page-list li a, .copyright-links li a{
+        font-size: 13px;
     }
 }
 
