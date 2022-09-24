@@ -27,26 +27,78 @@
             </a>
 
             <div class="nav-menu">
-                <ul>
-                    <li><a href="/">Home</a></li>
+                <ul class="nav-list">
+                    <li><a href="/" class="active">Home</a></li>
                     <li><a href="mixtapes.html">Mixtapes</a></li>
                     <li><a href="news.html">News</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
 
                 <div class="right-menu">
                     <a href="#" class="favorites">
-                        <i class="lni lni-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
                     </a>
 
                     <div class="search-toggler">
-                        <i class="lni lni-search-alt"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
+
+                <i class="fa-solid fa-bars" id="bar"></i>
+
+                <!-- <div class="search-toggle-open">
+                        <input type="search" name="search" placeholder="Search">
+                        <button type="submit" class="searchBtn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div> -->
             </div>
         </nav>
     </header>
+
+    <div class="popup-mobilemenu">
+        <div class="menu-inner">
+            <div class="menu-top">
+                <div class="menu-header">
+                    <a href="/" class="logo">
+                        <img src="images/logo-white.png" alt="logo">
+                    </a>
+
+                    <div class="close-button">
+                        <button class="close" id="close">
+                            <i class="fa-solid fa-close"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <nav id="sideNavMobile" class="mainmenu-nav">
+                    <ul class="navbar-list1">
+                        <li><a href="/" class="active">Home</a></li>
+                        <li><a href="mixtapes.html">Mixtapes</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="right-menu right-menu-mob">
+                <a href="#" class="favorites">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+                <div class="search-toggler">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="signin">
+                <button class="signin-btn" type="submit">Sign In</button>
+            </div>
+        </div>
+    </div>
 
     <!-- ===== Contact Section ===== -->
     <section class="about-page">
@@ -399,7 +451,7 @@
     </div>
 
     <!-- ===== Footer ===== -->
-    <footer>
+    <!-- <footer>
         <div class="container">
             <div class="footer-row">
                 <div class="footer-cols">
@@ -489,7 +541,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <script src="script.js"></script>
 
