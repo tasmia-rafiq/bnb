@@ -1841,12 +1841,75 @@ footer .headline .divider{
     .article-area .article-content h2{
         font-size: 28px;
     }
-    
+}
+
+@media (max-width: 768px){
+    .article .article-area{
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 540px){
+    .navbar .logo {
+        width: 25%;
+    }
+
+    .top-banner-img{
+        height: 50vh;
+    }
+
+    .top-banner .what-we-do h1{
+        font-size: 24px;
+    }
+
+    .news .row .col,
+    .achievements .row .col{
+        width: 100%;
+        padding-right: 0;
+    }
+    .achievements .row .col{
+        margin: 0 40px;
+    }
+
+    .about4{
+        padding: 30px 25px;
+    }
+    .about4 h2{
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+    .about4-content p,
+    .article-area .article-content p{
+        font-size: 13px;
+    }
+
+    .article-area .article-content h2{
+        font-size: 22px;
+    }
 }
 
 @media (max-width: 425px){
-    .navbar .logo {
+    .container{
+        padding: 10px 10px;
+    }
+    .achievements .achievement-content{
+        padding: 20px 10px;
+    }
+}
+
+@media(max-width: 375px){
+    .navbar{
+        padding: 7px 30px;
+    }
+    .navbar .logo{
         width: 30%;
+    }
+
+    .top-banner .what-we-do h1{
+        font-size: 20px;
+    }
+    .top-banner .what-we-do span{
+        font-size: 16px;
     }
 }
 
