@@ -487,10 +487,9 @@ header {
 
 .top-banner .contact-area {
     position: absolute;
-    margin-top: 60px;
-    margin-right: 50px;
-    top: 50%;
+    top: 55%;
     left: 55%;
+    right: 40px;
     transform: translateY(-50%);
 }
 .top-banner .contact-area .contact-form-wrapper{
@@ -1865,7 +1864,20 @@ footer .headline .divider{
     }
 
     .top-banner .contact-area{
-        display: none;
+        left: 50%;
+    }
+    .top-banner .contact-form-wrapper{
+        padding: 20px 20px;
+    }
+    .top-banner .contact-form-wrapper .form-group{
+        margin-bottom: 10px;
+    }
+    .top-banner .form-group label{
+        margin-bottom: 5px;
+    }
+    .top-banner .form-group input,
+    .top-banner .contact-form-wrapper input[type=submit]{
+        height: 45px;
     }
 
     .top-banner .what-we-do {
@@ -1948,9 +1960,12 @@ footer .headline .divider{
         width: 25%;
     }
 
-    .top-banner-img{
-        height: 50vh;
+    .top-banner .contact-area{
+        left: 30px;
+        right: 30px;
+        margin-top: 15px;
     }
+
     .news-header{
         height: 50vh;
         background-attachment: unset;
@@ -2047,6 +2062,16 @@ footer .headline .divider{
     .navbar .logo{
         width: 35%;
     }
+
+    .top-banner .contact-form-wrapper{
+        padding-bottom: 5px;
+    }
+
+    .top-banner .form-group input, .top-banner .contact-form-wrapper input[type=submit]{
+        height: 40px;
+        font-size: 14px;
+    }
+
     .achievements .achievement-content{
         padding: 20px 10px;
     }
