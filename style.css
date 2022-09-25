@@ -2063,6 +2063,13 @@ footer .headline .divider{
         width: 35%;
     }
 
+    .top-banner-img{
+        height: 80vh;
+    }
+    .top-banner .contact-area{
+        top: 40vh;
+    }
+
     .top-banner .contact-form-wrapper{
         padding-bottom: 5px;
     }
